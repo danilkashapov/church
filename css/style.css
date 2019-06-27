@@ -1,0 +1,567 @@
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+a {
+    text-decoration: none;
+    /*color: inherit;*/
+    color: white;
+}
+
+@font-face {
+    font-family: 'Church';
+    src: url(../assets/fonts/church.otf);
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+    font-family: 'Church', sans-serif;
+}
+body {
+    padding-top: 10vh;
+}
+header {
+    background: #2855ff;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+.header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+.container {
+    margin: auto;
+    padding: 0 20px;
+    max-width: 1040px;
+}
+.header div {
+    display: flex;
+    align-items: center;
+}
+.header > div:nth-child(2) a {
+    padding: 0 15px;
+    position: relative;
+}
+.header > div:nth-child(2) a:not(:last-child):after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #FFFFFF;
+    content: "";
+    transition: width 0.2s;
+}
+.header > div:nth-child(2) a:hover:after {
+    width: 100%;
+}
+.header > div:nth-child(2) a:last-child:hover {
+    transition: .5s;
+}
+.logo {
+    font-size: 20px;
+}
+.header > div:nth-child(2) a:last-child {
+    display: none;
+}
+
+.close:before {
+    position: absolute;
+    /*vertical-align: middle;*/
+    /*display: inline-block;*/
+    content: '';
+    background: url("../assets/img/cancel.svg") no-repeat center center /contain;
+    width: 41px;
+    height: 38px;
+    /*margin-right: 10px;*/
+    filter: invert(1);
+    left: 72%;
+    top: 20px;
+}
+
+
+
+.aboutUs:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../assets/img/question.svg") no-repeat center center /contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+.home:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../assets/img/house.svg") no-repeat center center /contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+.forum-icon:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../assets/img/chat.svg") no-repeat center center /contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+.photo:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../assets/img/photo-camera.svg") no-repeat center center /contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+.user:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../assets/img/avatar.svg") no-repeat center center /contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+
+
+
+
+
+
+.menu:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../assets/img/menu.png") no-repeat center center /contain;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    filter: invert(1);
+
+}
+.logo:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../assets/img/icons8-православная-церковь-64.png") no-repeat center center /contain;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+.logo2:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../assets/img/icons8-православная-церковь-64.png") no-repeat center center /contain;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+.instagram:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../assets/img/instagram.png") no-repeat center center /contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+.vk:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../assets/img/vk-social-logotype.png") no-repeat center center /contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+.telegram:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../assets/img/facebook.png") no-repeat center center /contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+main {
+    flex: 1 1 auto;
+    min-height: 100vh;
+}
+footer {
+    background: #2d2d2d;
+    padding: 15px 0;
+    color: #fff;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    /*margin: 0 -10px;*/
+}
+.church {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.church img {
+    /*height: 500px;*/
+    width: auto;
+
+}
+img {
+    max-width: 100%;
+}
+
+.post {
+    border-bottom: 4px solid #2855ff;
+    background: #FFFFFF;
+    padding: 10px;
+    margin: 10px;
+}
+.left {
+    width: 140%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.right {
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 100%;
+}
+.right h2 {
+    text-align: center;
+    color: #444444;
+}
+.left h2 {
+    text-align: center;
+    color: #444444;
+    padding: 5px 0  20px;
+}
+.church p {
+    color: #313131;
+    font-family: 'Arial', sans-serif;
+    padding: 10px 0;
+}
+.church div {
+    text-align: center;
+    padding: 20px 10px;
+}
+.church div img {
+    width: 300px;
+}
+footer h4 {
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+}
+.map img {
+    margin-top: 10px;
+}
+footer .content:last-child {
+    background: #444444;
+    padding: 20px;
+}
+.login {
+    width: 100%;
+    /*min-height: 100%;*/
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.login form {
+    box-shadow: 0 12px 15px 0 rgba(180, 198, 204, 0.4);
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    animation: fadeUp 1s;
+    animation-delay: .3s;
+}
+.login form h1 {
+    padding-bottom: 15px;
+}
+.login form input{
+    border-radius: 3px;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    display: block;
+    max-width: 300px;
+    height: 40px;
+    padding: 0 10px ;
+    margin: 15px auto 0;
+    border: 1px solid #d2d2d2;
+}
+.login form input[type=submit]{
+    color: #fff;
+    padding: 0 20px;
+    cursor: pointer;
+    background: #2855ff;
+    border: none;
+    display: inline-block;
+    width: auto;
+}
+.login form input[type=submit]:hover{
+    background: #1f40b1;
+}
+
+.login form input[type=button]{
+    color: #fff;
+    padding: 0 20px;
+    cursor: pointer;
+    background: #2855ff;
+    border: none;
+    display: inline-block;
+    width: auto;
+}
+.login form input[type=button]:hover{
+    background: #1f40b1;
+}
+.login form input:focus {
+    border-color: #2855ff;
+}
+.login h2 {
+    color: #494949;
+}
+
+.wrapper {
+    position: absolute;
+    overflow-x: hidden;
+}
+.main {
+    position: fixed;
+    left: 100%;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2855ff;
+    transition: .5s;
+    transform: translateX(0%);
+}
+.menu_active {
+    transform: translateX(-100%);
+}
+.menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    flex-direction: column;
+    /*border-bottom: 2px solid white;*/
+
+}
+.menu-list a {
+    padding: 10px;
+    width: 100%;
+    font-size: 25px;
+    text-align: left;
+}
+.menu-list a:active {
+    background: #1f40b1;
+    transition: .5s;
+}
+.forum {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.forum > div:not(:first-child):hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: .5s;
+}
+.forum > div:not(:first-child) {
+    margin: 5px 0;
+}
+.list {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    padding: 20px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    justify-content: space-between;
+
+}
+.list h2 {
+    text-align: center;
+    margin: 0 auto;
+    color: #444444;
+}
+.list h3 {
+    color: #444444;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #FFFFFF;
+    padding: 10px 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+.bg {
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.gallery img {
+    width: 300px;
+    height: 200px;
+    padding: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.gallery img:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: .5s;
+}
+.foot {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #3f3f3f;
+}
+.foot h2 {
+    text-align: center;
+}
+.logo2 {
+    display: none;
+}
+
+
+
+
+
+@media(max-width: 1030px){
+    .header > div:nth-child(2) a{
+        display: none;
+    }
+    .header > div:nth-child(2) a:last-child {
+        display: block;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .left {
+        width: 100%;
+
+    }
+    .right {
+        width: 100%;
+    }
+    .contacts {
+        width: 100%;
+        margin: auto;
+    }
+    .map {
+        width: 100%;
+        margin: auto;
+    }
+
+
+}
+
+@media(max-width: 874px){
+    .main {
+        width: 35%;
+    }
+
+}
+@media(max-width: 750px) {
+    .main {
+        width: 39%;
+    }
+}
+@media(max-width: 670px) {
+    .main {
+        width: 44%;
+    }
+}
+@media(max-width: 600px) {
+    .main {
+        width: 50%;
+    }
+}
+@media(max-width: 518px) {
+    .main {
+        width: 58%;
+
+    }
+}
+@media(max-width: 440px) {
+    .main {
+        width: 63%;
+    }
+}
+@media(max-width: 410px) {
+    .main {
+        width: 67%;
+    }
+}
+@media(max-width: 383px) {
+    .main {
+        width: 80%;
+    }
+}
+
+@media(width: 990px){
+    .main {
+        width: 63%;
+    }
+
+}
+
+@media (max-width: 437px) {
+    .logo {
+        display: none;
+    }
+    .logo2 {
+        display: block;
+    }
+}
+
+
